@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЭкоДон — Сохранение природы и традиций региона</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Навигация -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo"><i class="fa-solid.fa-leaf"></i> Эко<span>Дон</span></a>
+            <nav class="nav-menu">
+                <a href="#about">О проблеме</a>
+                <a href="#traditions">Традиции</a>
+                <a href="#actions">Волонтерство</a>
+                <a href="#media">Медиа</a>
+            </nav>
+            <a href="#actions" class="btn-primary">Присоединиться</a>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="main-screen">
+        <div class="container main-screen-content">
+            <h1>Спасем великую реку Дон вместе</h1>
+            <p>Экологический проект молодежной инициативы: решаем проблемы загрязнения водных ресурсов и возрождаем мудрые традиции бережного отношения к природе южного края.</p>
+            <div class="main-buttons">
+                <a href="#about" class="btn-primary">Изучить проблему</a>
+                <a href="#actions" class="btn-accent">Внести вклад</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел 1: Экологические проблемы Дона -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Экологические проблемы Дона</h2>
+                <p>Что угрожает главной водной артерии Ростовской области и как это исправить</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <i class="fa-solid.fa-water"></i>
+                    <h3>Заиливание и обмеление</h3>
+                    <p>Сокращение водности реки, цветение сине-зеленых водорослей и уменьшение притока пресной воды из-за антропогенной нагрузки.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid.fa-trash-can"></i>
+                    <h3>Пластиковое загрязнение</h3>
+                    <p>Тысячи тонн бытовых отходов ежегодно попадают в прибрежную зону Таганрогского залива и русло Дона в период паводков и отдыха туристов.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid.fa-fish"></i>
+                    <h3>Угроза биоразнообразию</h3>
+                    <p>Сокращение популяций ценных видов рыбы (осетровые, шемая, рыбец) из-за ухудшения качества воды и разрушения естественных нерестилищ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел 2: Традиции и культура -->
+    <section id="traditions" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Экологические традиции народов Дона</h2>
+                <p>Мудрость предков в гармонии с природой</p>
+            </div>
+            <div class="traditions-content">
+                <div class="tradition-text">
+                    <h3>Заветы казаков по охране вод и лесов</h3>
+                    <p>С древних времен казачьи войсковые законы строго регламентировали отношение к природе. Загрязнение рек, вырубка защитных лесополос вдоль берегов и бесконтрольный лов рыбы сурово наказывались станичным судом. Источники и родники всегда расчищались общими усилиями перед началом летнего сезона.</p>
+                    <ul class="check-list">
+                        <li><i class="fa-solid fa-check"></i> Защита малых рек и родников от заплывания</li>
+                        <li><i class="fa-solid fa-check"></i> Бережное рыболовство в период нереста</li>
+                        <li><i class="fa-solid fa-check"></i> Сохранение степного биоразнообразия</li>
+                    </ul>
+                </div>
+                <div class="tradition-image">
+                    <div class="image-box" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
+                        <div class="image-overlay">
+                            <span>Природа Дона и степные просторы</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел 3: Волонтерство и интерактив -->
+    <section id="actions" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Интерактив и волонтерство</h2>
+                <p>Стань частью решения экологических проблем региона</p>
+            </div>
+            
+            <div class="interactive-grid">
+                <!-- Калькулятор эко-следа -->
+                <div class="calc-box">
+                    <h3>Калькулятор эко-привычек</h3>
+                    <p>Узнайте, сколько пластика вы экономите для Дона в месяц:</p>
+                    <div class="form-group">
+                        <label>Сколько пластиковых бутылок вы заменяете многоразовой флягой в неделю?</label>
+                        <input type="number" id="bottles" min="0" value="5">
+                    </div>
+                    <button class="btn-primary" onclick="calculateEco()">Рассчитать вклад</button>
+                    <div id="calc-result" class="calc-result"></div>
+                </div>
+
+                <!-- Форма записи на субботник -->
+                <div class="form-box">
+                    <h3>Записаться на уборку берегов Дона</h3>
+                    <form id="eco-form" onsubmit="submitForm(event)">
+                        <div class="form-group">
+                            <input type="text" id="userName" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="userEmail" placeholder="Ваш Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="userLocation">
+                                <option>Берег р. Дон (Ростов-на-Дону)</option>
+                                <option>Зеленый остров</option>
+                                <option>Таганрогская набережная</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">Отправить заявку</button>
+                    </form>
+                </div>
+
+                <!-- Красивое кастомное модальное окно (всплывающее окно) -->
+                <div id="customModal" class="modal-overlay">
+                    <div class="modal-content">
+                        <div class="modal-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <h3>Заявка принята!</h3>
+                        <p id="modal-text">Спасибо за ваш вклад в защиту экологии Дона!</p>
+                        <button class="btn-primary" onclick="closeModal()">Отлично</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел 4: Медиаконтент (Галерея и видео) -->
+    <section id="media" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Галерея</h2>
+                <p>Красота донской природы в объективе волонтеров</p>
+            </div>
+            <div class="media-grid-4">
+                <div class="media-card">
+                    <div class="media-img" style="background-image: url('https://ic.pics.livejournal.com/mrakorius/68705938/1140416/1140416_original.jpg');"></div>
+                    <div class="media-info">
+                        <h4>Закат над рекой Дон</h4>
+                        <p>Фото участника эко-экспедиции</p>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-img" style="background-image: url('https://cdn.er.ru/media/news/June2024/g2QJ367i0VqwtdIQZwA0.jpg');"></div>
+                    <div class="media-info">
+                        <h4>Волонтерский субботник</h4>
+                        <p>Очистка прибрежной зоны от пластика</p>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-img" style="background-image: url('https://images.unsplash.com/photo-1599293220344-64dc45238326?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+                    <div class="media-info">
+                        <h4>Степные просторы</h4>
+                        <p>Ландшафты Ростовской области</p>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-img" style="background-image: url('https://images.unsplash.com/photo-1766766356909-555124b50384?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHJpdmVyJTIwZG9ufGVufDB8fDB8fHww');"></div>
+                    <div class="media-info">
+                        <h4>Красота Ростова-на-Дону</h4>
+                        <p>А без мусора ещё лучше!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Проект «ЭкоДон». Номинация: Цифровые технологии для единства и экологии народов России.</p>
+            <p>Конкурс «Включай ЭКОлогику» (Возрастная группа 15-18 лет)</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

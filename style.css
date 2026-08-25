@@ -1,0 +1,438 @@
+:root {
+    --primary-color: #1b4332;
+    --accent-color: #2d6a4f;
+    --highlight-color: #52b788;
+    --light-bg: #f8f9fa;
+    --dark-text: #212529;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--dark-text);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Шапка */
+.header {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--highlight-color);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--highlight-color);
+}
+
+/* Кнопки */
+.btn-primary, .btn-accent, .btn-outline {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+}
+
+.btn-accent {
+    background-color: var(--highlight-color);
+    color: var(--white);
+}
+
+.btn-accent:hover {
+    background-color: var(--accent-color);
+}
+
+.btn-outline {
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+/* Главный экран */
+.main-screen {
+    background: linear-gradient(rgba(27, 67, 50, 0.8), rgba(45, 106, 79, 0.8)), url('https://media.istockphoto.com/id/1349715527/ru/%D1%84%D0%BE%D1%82%D0%BE/%D1%80%D0%B5%D0%BA%D0%B0-%D0%B4%D0%BE%D0%BD-%D0%B2%D0%B8%D0%B4-%D1%81-%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D1%8B.jpg?s=612x612&w=0&k=20&c=-47gMds1vhxtu8Vl8E44KjxdtCgmAuLoltrZOnReMoY=') center/cover;
+    height: 94vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: 70px;
+    padding: 0 20px;
+}
+
+.main-screen-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.main-screen-content p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.main-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Секции */
+.section {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: var(--light-bg);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #6c757d;
+    font-size: 16px;
+}
+
+/* Карточки проблем */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card i {
+    font-size: 40px;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* Традиции */
+.traditions-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.tradition-text h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.tradition-text p {
+    margin-bottom: 20px;
+}
+
+.check-list {
+    list-style: none;
+}
+
+.check-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.check-list i {
+    color: var(--highlight-color);
+}
+
+.image-box {
+    position: relative;
+    height: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.image-box i {
+    font-size: 60px;
+    color: var(--highlight-color);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(27, 67, 50, 0.85));
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Интерактив */
+.interactive-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.calc-box, .form-box {
+    background: var(--light-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.calc-box h3, .form-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.calc-result {
+    margin-top: 15px;
+    font-size: 15px;
+    color: var(--primary-color);
+}
+
+/* Стили для красивого модального окна */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-icon {
+    font-size: 50px;
+    color: var(--highlight-color);
+    margin-bottom: 15px;
+}
+
+.modal-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    color: #6c757d;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+/* Медиа галерея */
+.media-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden; /* Скрывает вылезающие края при наведении */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.media-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.media-img {
+    width: 100%;
+    height: 250px; /* Увеличили высоту для естественных пропорций */
+    aspect-ratio: 16 / 10; /* Сохраняет идеальное соотношение сторон */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.media-card:hover .media-img {
+    transform: scale(1.05);
+}
+
+.media-info {
+    padding: 20px;
+}
+
+.media-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.media-info p {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.media-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .media-grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Футер */
+.footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer-content p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    .traditions-content, .interactive-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
